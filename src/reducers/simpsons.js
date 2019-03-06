@@ -1,22 +1,25 @@
-import { FETCH_QUOTES, FETCH_QUOTES_LOADING } from "../action/simpsons";
+import { FETCH_QUOTE, FETCH_QUOTES_LOADING } from "../action/simpsons";
 
 const initialState = {
-  quotes: [],
-  loading: false
+    quote: '',
+    name: '',
+    image: ''
 }
 
 export default function reducer(state = initialState, { type, payload}) {
   switch(type) {
-    case FETCH_QUOTES:
+    case FETCH_QUOTE:
       return { ...state,
-      quotes: payload,
-      loading: false
-    };
-    case FETCH_QUOTES_LOADING:
-    return { ...state,
-      loading: true
+        quote: payload.quote, 
+        name: payload.name, 
+        image: payload.image,
+        loading: false
       };
+    case FETCH_QUOTES_LOADING:
+      return { ...state,
+          loading: true
+        };
     default:
       return state;
-  }
+ }
 }
