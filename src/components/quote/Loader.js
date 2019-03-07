@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { pulse } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
+import styles from './loader.css';
 
 const animation = {
   pulse: {
@@ -13,7 +14,7 @@ const animation = {
 function Loader({ fetch }) {
   return (
     <StyleRoot>
-    <button onClick={fetch} style={animation.pulse}> Get Another Character </button>
+    <button className={styles.red} className={styles.push_button} onClick={fetch} style={animation.pulse}> Get Another Character </button>
     </StyleRoot>
   );
 }

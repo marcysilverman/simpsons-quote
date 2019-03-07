@@ -1,0 +1,39 @@
+
+.push_button {
+	position: relative;
+	width:220px;
+	height:40px;
+	text-align:center;
+	color:black;
+	text-decoration:none;
+  line-height:43px;
+  font-size: 20px;
+  font-family: 'Gochi Hand', cursive;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  background-image:linear-gradient(#F66C7B, #D25068);
+}
+.push_button:before {
+	background-image:linear-gradient(#F66C7B, #D25068);
+	border-radius:5px;
+	
+	box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF;
+	
+	position: absolute;
+	content: "";
+	left: -6px; right: -6px;
+	top: -6px; bottom: -10px;
+	z-index: -1;
+}
+
+.push_button:active {
+  background-image:linear-gradient(#F66C7B, #D25068);
+	top:5px;
+}
+.push_button:active:before{
+  background-image:linear-gradient(#F66C7B, #D25068);
+	top: -11px;
+	bottom: -5px;
+}
