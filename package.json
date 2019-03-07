@@ -20,7 +20,9 @@
   "license": "ISC",
   "dependencies": {
     "normalize.css": "^8.0.1",
+    "radium": "^0.25.1",
     "react": "^16.8.2",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.8.2",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
