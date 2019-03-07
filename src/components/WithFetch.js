@@ -15,7 +15,7 @@ export const WithFetch = Component => {
     render() {
       return (
         <>
-          { this.props.loading ? <h1> Loading </h1> : <Component {...this.props} /> }
+          <Component {...this.props} /> 
         </>
       );
     }

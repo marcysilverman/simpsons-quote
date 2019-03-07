@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Loader from './Loader';
+import styles from './quote.css';
 
 function Quote({ quote, name, image, loading, fetch }) {
   return (
     <>
-    {loading ? <h1> Loading </h1> :
+    {loading ? <h1 className={styles.homeTitle}>Donuts...Yum<img className={styles.image} src='../../../assets/loader.png'/></h1> : 
     <div>
-      <h1> {quote} </h1>
-      <h1> {name} </h1>
-      <img src={image}/>
+      <h1 className={styles.homeName}> {name} </h1>
+      <h1 className={styles.homeQuote}> {quote} </h1>
+      <img className={styles.homeImage} src={image}/>
       <Loader fetch={fetch} /> 
     </div>}
     </>
