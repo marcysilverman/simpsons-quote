@@ -1,4 +1,4 @@
-function getQuotes() {
+export const getQuotes = () => {
   console.log('hello');
   return fetch('https://cors-anywhere.herokuapp.com/https://thesimpsonsquoteapi.glitch.me/quotes', {
     headers: {
@@ -8,6 +8,5 @@ function getQuotes() {
     .then(res => res.json());
 }
 
-export default getQuotes;
 
 
