@@ -12,9 +12,9 @@ export default function reducer(state = initialState, { type, payload }) {
     case FETCH_QUOTE: {
       return { 
         ...state, 
-        quote: payload[0].quote,
-        name: payload[0].character,
-        image: payload[0].image,
+        quote: payload.quote,
+        name: payload.character,
+        image: payload.image,
         loading: false
       };
     }
